@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html ng-app="RaidAlert">
+
+<head>
+  <title>RaidAlert</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+  <div ng-controller="MainController">
+
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <a href="#home" class="navbar-brand" onclick="$('#home').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">
+          <div class="logo">
+            RaidAlert
+          </div>
+        </a>
+        <div class="container">
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="#about" onclick="$('#about').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">About</a></li>
+            <li role="presentation"><a href="#map" onclick="$('#map').animatescroll({scrollSpeed:1000,easing:'easeInOutBack', padding:199});">Map</a></li>
+            <li role="presentation"><a href="#donate" onclick="$('#donate').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">Donate</a></li>
+            <li role="presentation"><a href="#contact" onclick="$('#contact').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <body>
+      <div id="home">
+        <h1 class="text-center title">RaidAlert</h1>
+        <div id="data-input"class="row">
+          <div class="text-center col-md-12 form-group">
+            <p style="font-size: 16px;">Instructions: To use our service, input your phone number and zip code into the fields above, hit the submit button, and automatically be notificed of ICE Raids occuring within your area!</p> <br><br>
+            <label style="font-size: 20px;">Phone Number </label>
+            <input type="text" ng-model="phone-number" placeholder="Phone Number"><br><br>
+            <label style="font-size: 20px;">Zip Code </label><input type="text" ng-model="zip-code" placeholder="Zip Code"><br><br>
+            <button ng-click="createUser(newUser)" class="btn btn-default btn-success btn-lrg" data-toggle="modal" data-target="#myModal">Submit & Stay Safe!</button>
+          </div>
+        </div>
+        <!-- Signup Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Signup Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">We Appreciate You!</h4>
+              </div>
+                <div class="modal-body text-center">
+                  <div class="form-group row">
+                    <div class="col-md-12">
+                      <h1>Thank you for registering with RaidAlert!</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-down">
+            <a href="#about" onclick="$('#about').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">
+            <i class="fa fa-angle-down scroll-down-caret bounce" style="margin-bottom: 100px;">
+
+            </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id='about'>
+        <section class='copy'>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 30px;">
+              <h1 class="hideme" style="font-size: 60px;">About Raid Alert</h1>
+              <p>In the past weeks/months , there has been an immigration crisis in the United States, affecting millions of Americans around the country.</p>
+              <p>There’s evidence that ICE raids and/or detentions are occurring more frequently, as reports continue to pop up throughout the country in at least eight states (California, Georgia, Texas, Arizona, Kansas, New York, Virginia, South and North Carolina.) <br>ICE insists the raids are targeted and nothing new and denies social media reports that checkpoints were set up in communities. However, in the wake of the recent election, we have reason to believe these raids are not simply a coincidence. <br> RaidAlert strives to be the "underground railroad" of immigration alerts, in a time where many Americans feel unsafe in their own country.</p>
+              Video!
+            </div>
+
+            <div class="col-md-12 text-center">
+              <h2 class="text-center hideme" style="padding-top: 70px;">Our Mission:</h2><br>
+              <p style="font-size: 20px;">We strive to be a vital resource for all Americans subject new legislation that bans immigrants from residing in the United States.</p>
+              <p style="font-size: 20px;">It is our goal to protect the liberty, equal rights, and lives of our fellow Americans, no matter their nationality, race, or religion.</p>
+              <p style="font-size: 20px;">Please help us in making the United States a safer place for us all.</p>
+            </div>
+          </div>
+        </section>
+        </div>
+
+        <div id='Map'>
+          <section class='copy' >
+            <h2 class='text-center' style="color: black">Live ICE Raid Map</h2>
+            <div class="container" id='map'>
+
+            </div>
+
+          </section>
+        </div>
+        <div id='donate'>
+          <section class='copy'>
+            <h2 class='text-center'>Donate</h2>
+            <p>
+              Please donate to immigrant families in need of support. There are __ workers in the US in danger of being deported which puts these individuals and their families at an immediate financial risk. These people are men, women, and children just like yourself, and need our support to get past these tough times.
+            </p>
+          </section>
+        </div>
+        <div id='contact' >
+          <section class='copy' id='land'>
+            <h2  class='text-center'>Contacts / Resources</h2>
+            <div class="row">
+              <div class="col-md-12" style="padding-top: 10px;">
+                <ul style="margin-left: 525px; list-style-type: none;">
+                  <li><a class="btn" href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="btn" href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="btn" href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a class="btn" href="http://github.com/"><i class="fa fa-github"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="resources" style="margin-top: -50px;">
+              <h2 class="text-center">Tools To Defend Your Rights</h2><br>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3 class="text-center">English</h3>
+                  <ul class>
+                    <li ng-show="myVar"><a href="https://www.nilc.org/get-involved/community-education-resources/know-your-rights/immraidsprep_2007-02-27/">How to be Prepared for an Immigration Raid</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/PDFs/community/2017_25Jan-ijn-faq.pdf">FAQ on Immigration Enforcement Executive Actions</a></li>
+                    <li><a href="https://www.nilc.org/wp-content/uploads/2015/12/raids_checklist_firm_2007-04.pdf">Community Raid Preparedness Checklist</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/iceWatch.html">What to do if ICE comes to your door</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/PDFs/community/2017_12Jan_8ways.pdf">Travel Advisory for Noncitizens Travelling to Washington D.C. for Rallies, Protests, or Actions: 8 Things Immigrants Can Do</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/PDFs/community/2016_Jan_KYR_OneSheet_Eng.pdf">Know Your Rights Card</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="text-center">Español</h3>
+                  <ul>
+                    <li ng-hide="myVar"><a href="https://www.nilc.org/get-involved/community-education-resources/know-your-rights/preppararedadas_2007-03-27/">Como prepararse para una redada de inmigración</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/PDFs/community/know-your-rights-espanol.pdf">Como proteger a usted y a su familia durante las redadas migratorias</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/iceWatch.html">En caso de redadas, ¿qué puedes hacer?</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/PDFs/community/2017_17Jan_8ways-esp.pdf">Cosas que los inmigrantes pueden hacer si viajaran a las marchas de Washington D.C.</a></li>
+                    <li><a href="https://nationalimmigrationproject.org/PDFs/community/2016_Jan_KYR_OneSheet_Eng.pdf">Tu tarjeta de conoce su derechos</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <div class="legal-support" style="margin-top: -50px;">
+              <div class="row text-center">
+                <h2 class="text-center">Legal Support</h2>
+                <a href="https://www.aclu.org/issues/immigrants-rights">American Civil Liberties Union</a><br>
+                <a href="njfon.org">National Justice For Our Neighbors</a><br>
+                <a href="http://www.immigrantjustice.org/">National Immigrant Justice Center</a><br>
+                <a href="www.maldef.org">Mexican American Legal Defense and Education Fund (MALDEF)</a><br>
+                <!-- <a href="http://www.nnirr.org/drupal/">National Network for Immigrant and Refugee Rights</a> -->
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <script src="animatescroll.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/controllers/main.controller.js"></script>
+      <script src="js/controllers/scroll.controller.js"></script>
+      <script src="js/services/alert.service.js"></script>
+    </div>
+  </body>
+  </html>
