@@ -179,9 +179,6 @@
         padding:0,
         element:"html,body"
     };
-    $scope.myVar = false;
-    $scope.toggle = function() {
-        $scope.myVar = !$scope.myVar;
-      };
+  
 
 }(jQuery));

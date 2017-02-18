@@ -188,3 +188,13 @@ div.scroll-down {
 .fa-github {
 	background:#dd4b39
 }
+
+#htmlwidget_container {
+  width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#social {
+
+}
