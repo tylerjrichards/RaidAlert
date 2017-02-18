@@ -5,7 +5,11 @@ var Schema = mongoose.Schema;
 
 // tells our cookie cutter the shape its going to cut in
 var alertSchema = new Schema({
-  title: {
+  phone: {
+    type: String,
+    required: true
+  },
+  zip: {
     type: String,
     required: true
   }

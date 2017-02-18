@@ -19,7 +19,7 @@ function MainController($scope, AlertService){
   }, function(){
     $scope.alerts = AlertService.get();
   });
-  function createAlbum(newAlert){
+  function createAlert(newAlert){
     AlertService.create(newAlert);
     $scope.newAlert = '';
   }

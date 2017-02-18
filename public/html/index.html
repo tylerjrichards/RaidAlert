@@ -30,15 +30,15 @@
       </nav>
     </header>
     <body>
-      <div id="home">
-        <h1 class="text-center title">RaidAlert</h1>
+      <div id="home" class="text-center" >
+        <img src="./img/logo2.png" class=""alt="">
         <div id="data-input"class="row">
           <div class="text-center col-md-12 form-group">
             <p style="font-size: 16px;">Instructions: To use our service, input your phone number and zip code into the fields above, hit the submit button, and automatically be notificed of ICE Raids occuring within your area!</p> <br><br>
             <label style="font-size: 20px;">Phone Number </label>
-            <input type="text" ng-model="phone-number" placeholder="Phone Number"><br><br>
-            <label style="font-size: 20px;">Zip Code </label><input type="text" ng-model="zip-code" placeholder="Zip Code"><br><br>
-            <button ng-click="createUser(newUser)" class="btn btn-default btn-success btn-lrg" data-toggle="modal" data-target="#myModal">Submit & Stay Safe!</button>
+            <input type="text" ng-model="newAlert.phone" placeholder="Phone Number"><br><br>
+            <label style="font-size: 20px;">Zip Code </label><input type="text" ng-model="newAlert.zip" placeholder="Zip Code"><br><br>
+            <button ng-click="createAlert(newAlert)" class="btn btn-default btn-success btn-lrg" >Submit & Stay Safe!</button>
           </div>
         </div>
         <!-- Signup Modal -->
@@ -78,7 +78,7 @@
             <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 30px;">
               <h1 class="hideme" style="font-size: 60px;">About Raid Alert</h1>
               <p>In the past weeks/months , there has been an immigration crisis in the United States, affecting millions of Americans around the country.</p>
-              <p>There’s evidence that ICE raids and/or detentions are occurring more frequently, as reports continue to pop up throughout the country in at least eight states (California, Georgia, Texas, Arizona, Kansas, New York, Virginia, South and North Carolina.) <br>ICE insists the raids are targeted and nothing new and denies social media reports that checkpoints were set up in communities. However, in the wake of the recent election, we have reason to believe these raids are not simply a coincidence. <br> RaidAlert strives to be the "underground railroad" of immigration alerts, in a time where many Americans feel unsafe in their own country.</p>
+              <p>There’s evidence that ICE raids and/or detentions are occurring more frequently, as reports continue to pop up throughout the country in at least eight states. <br>ICE insists the raids are targeted, nothing new, and denies social media reports that checkpoints were set up in communities. However, in the wake of the recent election, we have reason to believe these raids are not simply a coincidence. <br> RaidAlert strives to be the "underground railroad" of immigration alerts, in a time where many Americans feel unsafe in their own country.</p>
               Video!
             </div>
 
@@ -101,12 +101,13 @@
 
           </section>
         </div>
-        <div id='donate'>
+        <div id='donate' class="text-center">
           <section class='copy'>
             <h2 class='text-center'>Donate</h2>
-            <p>
-              Please donate to immigrant families in need of support. There are __ workers in the US in danger of being deported which puts these individuals and their families at an immediate financial risk. These people are men, women, and children just like yourself, and need our support to get past these tough times.
+            <p class="text-center" style="margin-top: 50px;">
+              Please donate to immigrant families in need of support. <br>There are __ workers in the US in danger of being deported which puts these individuals and their families at an immediate financial risk. <br>These people are men, women, and children just like yourself, and need our support to get past these tough times.
             </p>
+            <h3 style="margin-top: 40px;">List of Reputable Charities:</h3>
           </section>
         </div>
         <div id='contact' >
