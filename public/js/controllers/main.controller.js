@@ -36,5 +36,11 @@ function MainController($scope, AlertService){
 
 }
 
+AOS.init();
+$(window).on('load', function () {
+    AOS.refresh();
+});
+
+
 
 }());

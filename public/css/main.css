@@ -203,10 +203,18 @@ div.scroll-down {
 
 .container{
   width: 100%;
+  display: flex;
 }
 .h1-container{
   width: 200px
 }
 .img-container{
   width: 100%;
+}
+
+.well {
+  background: black !important;
+  border: 2px solid white !important;
+  width:  !important;
+  height:  !important;
 }
