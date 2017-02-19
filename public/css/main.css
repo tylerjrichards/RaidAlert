@@ -218,3 +218,8 @@ div.scroll-down {
   width:  !important;
   height:  !important;
 }
+
+.mainlogo {
+  margin-top: -70px;
+  height: 290px;
+}
