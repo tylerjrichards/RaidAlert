@@ -8,7 +8,7 @@
 }
 
 #map {
-  background-color: white;
+  background-color: #A9A9A9;
 }
 
 #donate {
@@ -34,7 +34,7 @@
 
 .navbar {
   border: 0px !important;
-  background-color: black !important;
+  background-color: transparent !important;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
@@ -195,6 +195,18 @@ div.scroll-down {
     position: relative;
 }
 
-#social {
+.map {
+  height: 630px;
+  width: auto;
+  margin: auto;
+}
 
+.container{
+  width: 100%;
+}
+.h1-container{
+  width: 200px
+}
+.img-container{
+  width: 100%;
 }
