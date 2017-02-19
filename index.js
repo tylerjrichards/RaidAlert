@@ -8,7 +8,7 @@ var alertRouter = require('./server/routers/alert.router.js');
 // connects mongoose to mongoose npm package
 var mongoose = require('mongoose');
 // creates a variable for where our database resides
-var mongoURI = process.env.MONGOURI || require('./doit.js').mongoURI;
+var mongoURI = process.env.MONGOURI || require('./config.js').mongoURI;
 // creates the database connection
 mongoose.connect(mongoURI);
 
